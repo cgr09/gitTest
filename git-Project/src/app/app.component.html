@@ -1,4 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -38,4 +38,61 @@
       <span class="glyphicon glyphicon-star"></span> Star 
     </a>
   </p> 
+</div> -->
+
+<!-- <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
+<bootstrap-panel>
+  <div class="heading">Heading</div>
+  <div class="body">
+    <h2>Body</h2>
+    <p>Some content here...</p>
+  </div>
+</bootstrap-panel>
+
+<like></like> -->
+
+<button (click)="loadCourses()">Load Courses</button>
+
+<button class="btn btn-success" (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of courses; index as i; trackBy: trackCourse">
+    {{ i }} - {{ course.name }}
+    <button class="btn btn-primary" (click)="onChange(course)">Update</button>
+    <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
+  </li>
+  <!-- <li *ngFor="let course of courses; even as isEven">
+      {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+    </li> -->
+</ul>
+
+<favorite></favorite>
+
+<button
+(click)="onSave()"
+
+[ngStyle]="{
+  'backgroundColor': canSave ? 'blue' : 'grey',
+  'color': canSave ? 'white' : 'black',
+  'fontWeight' : canSave ? 'bold' : 'normal'
+}"
+>
+Save
+</button>
+
+<!-- The following is the class binding equivalent of the ng directive lines above -->
+<!--[style.backgroundColor]="canSave ? 'blue' : 'grey'"
+[style.color]="canSave ? 'white' : 'black'"
+[style.fontWeight]="canSave ? 'bold' : 'normal'"-->
+
+<div>
+    <span *ngIf="task.assignee">{{ task.assignee.name}}</span>
 </div>
+
+<input type="text" [appInputFormat]="'lowercase'">
+
+<!-- zippy component -->
+<zippy title="Shipping Details">
+  Shipping Details Content
+</zippy>
+
+<contact-form></contact-form>
