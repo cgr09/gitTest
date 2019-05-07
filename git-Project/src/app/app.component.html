@@ -51,7 +51,7 @@
 
 <like></like> -->
 
-<button (click)="loadCourses()">Load Courses</button>
+<!-- <button (click)="loadCourses()">Load Courses</button>
 
 <button class="btn btn-success" (click)="onAdd()">Add</button>
 <ul>
@@ -60,12 +60,12 @@
     <button class="btn btn-primary" (click)="onChange(course)">Update</button>
     <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
   </li>
-  <!-- <li *ngFor="let course of courses; even as isEven">
+  <li *ngFor="let course of courses; even as isEven">
       {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
-    </li> -->
-</ul>
+    </li>
+</ul> -->
 
-<favorite></favorite>
+<!-- <favorite></favorite>
 
 <button
 (click)="onSave()"
@@ -77,22 +77,31 @@
 }"
 >
 Save
-</button>
+</button> -->
 
 <!-- The following is the class binding equivalent of the ng directive lines above -->
 <!--[style.backgroundColor]="canSave ? 'blue' : 'grey'"
 [style.color]="canSave ? 'white' : 'black'"
 [style.fontWeight]="canSave ? 'bold' : 'normal'"-->
 
-<div>
+<!-- <div>
     <span *ngIf="task.assignee">{{ task.assignee.name}}</span>
 </div>
 
-<input type="text" [appInputFormat]="'lowercase'">
+<input type="text" [appInputFormat]="'lowercase'"> -->
 
 <!-- zippy component -->
-<zippy title="Shipping Details">
+<!-- <zippy title="Shipping Details">
   Shipping Details Content
-</zippy>
+</zippy> -->
 
-<contact-form></contact-form>
+<!-- <contact-form></contact-form> -->
+<!-- <course-form></course-form> -->
+
+<!-- <signup-form></signup-form> -->
+
+<!-- <div>
+  <new-course-form></new-course-form>
+</div> -->
+
+<reset-password-form></reset-password-form>
